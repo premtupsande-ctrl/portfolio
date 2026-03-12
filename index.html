@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PREM TUPSANDE | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#0f0f0f;
+color:#cdfb7c;
+}
+
+/* VIDEO BACKGROUND */
+
+#bg-video{
+position:fixed;
+right:0;
+bottom:0;
+min-width:100%;
+min-height:100%;
+object-fit:cover;
+opacity:0.15;
+z-index:-1;
+}
+
+/* HEADER */
+
+header{
+text-align:center;
+padding:60px 20px;
+background:#111;
+}
+
+header h1{
+font-size:52px;
+margin:0;
+}
+
+header p{
+color:#bbb;
+}
+
+nav{
+margin-top:20px;
+}
+
+nav a{
+margin:0 20px;
+color:#00ffcc;
+text-decoration:none;
+font-weight:500;
+}
+
+
+
+/* EXPERIENCE HIGHLIGHT */
+
+.highlight{
+text-align:center;
+background:#1b1b1b;
+padding:20px;
+border-bottom:1px solid #333;
+}
+
+.highlight p{
+font-size:18px;
+margin:0;
+color:#cdfb7c;
+font-weight:500;
+}
+
+.highlight span{
+color:#00ffcc;
+font-weight:600;
+}
+
+.highlight-ids{
+margin-top:10px;
+}
+
+.highlight-ids a{
+margin:0 10px;
+color:#00ffcc;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+.highlight-ids a:hover{
+text-decoration:underline;
+}
+
+/* SECTIONS */
+
+.container{
+padding:40px;
+}
+
+.section{
+background:#1b1b1b;
+padding:30px;
+margin-bottom:60px;
+border-radius:10px;
+}
+
+.section h2{
+margin-top:0;
+}
+
+/* REELS */
+
+.reels-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.reel{
+aspect-ratio:9/16;
+overflow:hidden;
+border-radius:12px;
+background:black;
+}
+
+.reel video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* YOUTUBE */
+
+.youtube-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.youtube-grid iframe{
+width:100%;
+height:250px;
+border:none;
+border-radius:10px;
+}
+
+/* RECENT REACH */
+
+.reach-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:20px;
+}
+
+.reach-grid img{
+width:100%;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reach-grid img:hover{
+transform:scale(1.05);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+/* GRAPHICS */
+
+.graphics-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.graphics-grid img{
+width:100%;
+border-radius:10px;
+}
+
+/* PRICING */
+
+.pricing{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.price-box{
+background:#262626;
+padding:20px;
+border-radius:10px;
+}
+
+/* VIEW MORE BUTTON */
+
+.view-more{
+text-align:center;
+margin-top:20px;
+}
+
+.view-more a{
+background:#00ffcc;
+color:black;
+padding:10px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* THANK YOU */
+
+.thankyou{
+text-align:center;
+padding:60px;
+font-size:26px;
+}
+
+/* CONTACT BUTTON */
+
+button{
+background:#00ffcc;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#111;
+color:#777;
+}
+
+/* HEADER PROFILE */
+
+.header-content{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.profile-pic{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #00ffcc;
+box-shadow:0 10px 30px rgba(0,255,204,0.4);
+}
+
+.header-text h1{
+margin:0;
+font-size:52px;
+}
+
+.header-text p{
+margin:5px 0 0;
+color:#bbb;
+}
+
+/* SOCIAL MEDIA */
+
+.social-grid{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+.social-grid a{
+background:#262626;
+padding:15px 25px;
+border-radius:10px;
+text-decoration:none;
+color:#00ffcc;
+font-weight:500;
+transition:0.3s;
+}
+
+.social-grid a:hover{
+background:#00ffcc;
+color:black;
+}
+ 
+
+ /* ABOUT ME */
+
+.about{
+display:flex;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.about img{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #00ffcc;
+box-shadow:0 10px 30px rgba(0,255,204,0.4);
+}
+
+.about-text{
+flex:1;
+}
+
+.about-text p{
+line-height:1.7;
+color:#bbb;
+}
+
+
+/* REELS */
+
+.reels-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.reel{
+aspect-ratio:9/16;
+overflow:hidden;
+border-radius:12px;
+background:black;
+}
+
+.reel video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+
+/* VIEW MORE BUTTON */
+
+.view-more{
+text-align:center;
+margin-top:25px;
+}
+
+.view-more a{
+background:#00ffcc;
+color:black;
+padding:12px 25px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+transition:0.3s;
+}
+
+.view-more a:hover{
+background:#00e6b8;
+transform:scale(1.05);
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+<!-- BACKGROUND VIDEO -->
+
+<video autoplay muted loop id="bg-video">
+<source src="videos/background.mp4" type="video/mp4">
+</video>
+
+<header>
+
+<div class="header-content">
+
+<img src="images/profile2.jpeg" class="profile-pic">
+
+<div class="header-text">
+<h1>PREM TUPSANDE</h1>
+<p>Cinematographer • Editor • Social Media Manager</p>
+</div>
+
+</div>
+
+<nav>
+<a href="#reels">Work</a>
+<a href="#graphics">Graphics</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+    <!-- EXPERIENCE HIGHLIGHT -->
+
+<div class="highlight">
+
+<p>
+Worked with <span>10+ Instagram Accounts</span> •
+<span>3+ Years of Experience</span> •
+Still Growing 🚀
+</p>
+
+<div class="highlight-ids">
+
+<a href="https://instagram.com/prxm.editx" target="_blank">
+@prxm.editx
+</a>
+
+<a href="https://instagram.com/grandaura.planners" target="_blank">
+@grandaura.planners
+</a>
+
+<a href="https://instagram.com/vowcinematiquee" target="_blank">
+@vowcinematiquee
+</a>
+
+</div>
+
+</div>
+
+<!-- REELS -->
+
+<div class="section" id="reels">
+
+<h2>Instagram Reels Edits</h2>
+
+<div class="reels-grid">
+
+<div class="reel">
+<video controls>
+<source src="videos/reel3.mp4.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="reel">
+<video controls>
+<source src="videos/reel1.mp4.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="reel">
+<video controls>
+<source src="videos/reel2.mp4.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="reel">
+<video controls>
+<source src="videos/reel4.mp4.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+
+<div class="view-more">
+<a href="https://instagram.com/premtupsande" target="_blank">Profile</a>
+
+</div>
+
+</div>
+
+<!-- WEDDING REELS -->
+
+<div class="section" id="wedding-reels">
+
+<h2>Wedding Reels</h2>
+
+<div class="reels-grid">
+
+<div class="reel">
+<video controls>
+<source src="videos/wedding1.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="reel">
+<video controls>
+<source src="videos/wedding2.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="reel">
+<video controls>
+<source src="videos/wedding3.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="reel">
+<video controls>
+<source src="videos/wedding4.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+
+<div class="view-more">
+<a href="https://instagram.com/premtupsande" target="_blank">
+View More on Instagram
+</a>
+</div>
+
+</div>
+
+<!-- YOUTUBE -->
+
+<div class="section">
+
+<h2>YouTube Edits</h2>
+
+<div class="youtube-grid">
+
+<iframe src="https://www.youtube.com/embed/9W3VOhm9WFg" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/zEa8sB2niSQ" allowfullscreen></iframe>
+
+</div>
+
+<div class="view-more">
+<a href="https://youtube.com/@premtupsande" target="_blank">View More YouTube Edits</a>
+</div>
+
+</div>
+
+<!-- GRAPHICS -->
+
+<div class="section" id="graphics">
+
+<h2>Graphic Designs</h2>
+
+<div class="graphics-grid">
+
+<img src="graphics/banner1.jpeg">
+<img src="graphics/banner2.jpeg">
+<img src="graphics/banner3.jpeg">
+
+</div>
+
+</div>
+
+
+
+<!-- ABOUT ME -->
+
+<div class="section">
+
+<h2>About Me</h2>
+
+<div class="about">
+
+<img src="images/profile.jpeg" alt="Prem Tupsande">
+
+<div class="about-text">
+
+<p>
+Hi, I'm <b>Prem Tupsande</b>, a passionate cinematographer, video editor,
+and social media manager. I specialize in creating cinematic content,
+Instagram reels, YouTube videos, and creative graphic designs that help
+brands and creators grow their online presence.
+</p>
+
+<p>
+With strong storytelling and editing skills, I focus on delivering
+high-quality visual content that captures attention and connects with
+the audience.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SOCIAL MEDIA -->
+
+<div class="section">
+
+<h2>Follow My Work</h2>
+
+<div class="social-grid">
+
+<a href="https://instagram.com/grandaura.planners" target="_blank">
+Instagram
+</a>
+
+<a href="https://youtube.com/@premtupsande" target="_blank">
+YouTube
+</a>
+
+<a href="https://linkedin.com/in/prem-tupsande-14006a370?" target="_blank">
+LinkedIn
+</a>
+
+
+
+</div>
+
+</div>
+
+
+
+<!-- RECENT REACH -->
+
+<div class="section" id="reach">
+
+<h2>Recent Reach of Customers</h2>
+
+<div class="reach-grid">
+
+<img src="images/reach1.jpeg" alt="Customer Reach 1">
+
+<img src="images/reach2.jpeg" alt="Customer Reach 2">
+
+<img src="images/reach3.jpeg" alt="Customer Reach 3">
+
+<img src="images/reach4.jpeg" alt="Customer Reach 4">
+
+</div>
+
+</div>
+
+
+
+<!-- PRICING -->
+
+<div class="section" id="pricing">
+
+<h2>Pricing</h2>
+
+<div class="pricing">
+
+<div class="price-box">
+<h2>Basic Edit</h2>
+<p>Simple and clean video edit with cuts, basic transitions, and music sync.</p>
+<p>₹800</p>
+</div>
+
+<div class="price-box">
+<h2>Professional Edit</h2>
+<p>Includes on-site shooting and professional editing with cinematic transitions, color grading, and music sync.</p>
+<p>₹2000</p>
+</div>
+
+<div class="price-box">
+<h2> Wedding Cinematic Reels</h2>
+<p>5 cinematic wedding reels including shoot, professional editing, and same-day delivery.</p>
+<p>₹10000</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- CONTACT -->
+
+<div class="section" id="contact">
+
+<h2>Contact</h2>
+
+<p>Phone: +91 8055001179</p>
+
+<form>
+
+<input type="text" placeholder="Your Name" required style="width:100%;padding:10px;margin-bottom:10px">
+
+<input type="email" placeholder="Your Email" required style="width:100%;padding:10px;margin-bottom:10px">
+
+<textarea placeholder="Message" style="width:100%;padding:10px;height:120px"></textarea>
+
+<br><br>
+
+<button>Send</button>
+
+</form>
+
+</div>
+
+</div>
+
+<div class="thankyou">
+Thank You For Visiting My Portfolio 🙌
+</div>
+
+<footer>
+© 2026 PREM TUPSANDE | Portfolio
+</footer>
+
+</body>
+</html>
